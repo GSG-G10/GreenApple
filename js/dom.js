@@ -1,6 +1,5 @@
 //Random background API images
 const bodyBackground = document.querySelector(".bodyBg");
-const searchForm = document.querySelector("form");
 const searchResultDiv = document.querySelector(".searchResult");
 const container = document.querySelector(".container");
 
