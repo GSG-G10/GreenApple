@@ -26,9 +26,10 @@ html {
   display: flex;
   align-items: center;
 }
-
-.webSiteLogo img {
+.webSiteLogo a {
   margin: 0 auto 30px auto;
+}
+.webSiteLogo img {
   width: 200px;
   height: 200px;
 }
