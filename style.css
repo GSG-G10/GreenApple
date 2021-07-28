@@ -31,7 +31,6 @@ html {
   margin: 0 auto 30px auto;
   width: 200px;
   height: 200px;
-  color: rgb(12, 170, 26);
 }
 section {
   min-height: 100vh;
@@ -40,7 +39,7 @@ section {
   align-items: center;
   justify-content: center;
   padding: 100px 0;
-  /* background-color: rgb(67, 67, 68); */
+  background-color: rgb(67, 67, 68);
 }
 .container {
   width: 100%;
@@ -142,9 +141,6 @@ form ion-icon {
 @media (max-width: 768px) {
   .search-result {
     grid-gap: 10px;
-  }
-  .container.initial .brand {
-    font-size: 4rem;
   }
   .container.initial form {
     max-width: 500px;
