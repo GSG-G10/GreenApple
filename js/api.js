@@ -15,3 +15,11 @@ function api(url, callback) {
   xhr.open("GET", url);
   xhr.send();
 }
+
+// Random background API images
+(function randomImageGenerator() {
+  const url = "https://foodish-api.herokuapp.com/api/";
+  api(url, (response) => {
+    bodyBackground.style.backgroundImage = `url(${response.image})`;
+  });
+})();
