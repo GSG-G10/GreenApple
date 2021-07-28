@@ -10,18 +10,20 @@ function api(url, callback) {
   const xhr = new XMLHttpRequest();
 
   xhr.addEventListener("load", function () {
-    if (xhr.readyState == 4 && 200 <= xhr.status && xhr.status <= 299) {
-      let response = JSON.parse(xhr.responseText);
-      return callback(response);
-    } else if (300 <= xhr.status && xhr.status <= 399) {
-      httpStatusMessage.textContent = "Redirection messages";
-      httpStatusMessage.style.disply = "block";
-    } else if (400 <= xhr.status && xhr.status <= 499) {
-      httpStatusMessage.textContent = "Client error responses";
-      httpStatusMessage.style.disply = "block";
-    } else if (500 <= xhr.status && xhr.status <= 599) {
-      httpStatusMessage.textContent = "Server error responses";
-      httpStatusMessage.style.disply = "block";
+    if (xhr.readyState == 4) {
+      if (200 <= xhr.status && xhr.status <= 299) {
+        let response = JSON.parse(xhr.responseText);
+        return callback(response);
+      } else if (300 <= xhr.status && xhr.status <= 399) {
+        httpStatusMessage.textContent = "Redirection messages";
+        httpStatusMessage.style.disply = "block";
+      } else if (400 <= xhr.status && xhr.status <= 499) {
+        httpStatusMessage.textContent = "Client error responses";
+        httpStatusMessage.style.disply = "block";
+      } else if (500 <= xhr.status && xhr.status <= 599) {
+        httpStatusMessage.textContent = "Server error responses";
+        httpStatusMessage.style.disply = "block";
+      }
     }
   });
   xhr.open("GET", url);
