@@ -10,7 +10,7 @@ function api(url, callback) {
   const xhr = new XMLHttpRequest();
 
   xhr.addEventListener("load", function () {
-    if (200 <= xhr.status && xhr.status <= 299) {
+    if (xhr.readyState == 4 && 200 <= xhr.status && xhr.status <= 299) {
       let response = JSON.parse(xhr.responseText);
       return callback(response);
     } else if (300 <= xhr.status && xhr.status <= 399) {
