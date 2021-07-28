@@ -23,3 +23,4 @@ function api(url, callback) {
     bodyBackground.style.backgroundImage = `url(${response.image})`;
   });
 })();
+
