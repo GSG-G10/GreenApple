@@ -1,6 +1,4 @@
 let searchQuery = "";
-const APP_ID = "89a1d13b";
-const APP_key = "3f2a61e5b8ace018b67bc8fde3473cac";
 
 //  General Action
 function addListener(selector, action, callback) {
