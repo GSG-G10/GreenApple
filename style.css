@@ -77,7 +77,7 @@ form ion-icon {
   color: rgb(75, 75, 75);
   display: inline-block;
 }
-.search-result {
+.searchResult {
   margin-top: 50px;
   width: 100%;
   display: grid;
@@ -101,7 +101,7 @@ form ion-icon {
   align-items: center;
   justify-content: space-between;
 }
-.search-result .title {
+.searchResult .title {
   color: whitesmoke;
   margin: 20px 10px 0 0;
   font-size: 1.8rem;
