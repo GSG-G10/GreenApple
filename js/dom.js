@@ -2,6 +2,7 @@
 const bodyBackground = document.querySelector(".bodyBg");
 const searchResultDiv = document.querySelector(".searchResult");
 const container = document.querySelector(".container");
+const httpStatusMessage = document.querySelector(".statusHandler01");
 
 function showRecipes(results) {
     container.classList.remove("initial");
