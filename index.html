@@ -1,42 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Green Apple</title>
-</head>
-<body>
+  </head>
+  <body class="bodyBg">
     <!-- Started code  -->
     <section>
-        <div class="container initial">
-            <header>
-                <img src="images/logo.png" alt="Green Apple logo">
-            </header>
+      <div class="container initial">
+        <header class="webSiteLogo">
+          <img src="images/logo.png" alt="Green Apple logo" />
+        </header>
 
-            <main>
-                    <form>
-                        <input type="text" placeholder="Search Your Recipe...">
-                        <ion-icon name="search"></ion-icon>
-                    </form>
+        <main>
+          <form class="searchForm">
+            <input type="text" placeholder="Search Your Recipe..." />
+            <ion-icon name="search"></ion-icon>
+          </form>
 
-                <!-- Random image section -->
-                <div class="random-img">
+          <!-- Random image section -->
+          <div class="random-img"></div>
 
-                </div>
-
-                <!-- Search result section -->
-                <div class="search-result">
-
-                </div>
-            </main>
-        </div>
+          <!-- Search result section -->
+          <div class="search-result"></div>
+        </main>
+      </div>
     </section>
 
     <!-- java script files -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <script src="js/api.js"></script>
     <script src="js/dom.js"></script>
     <script src="js/logic.js"></script>
-</body>
+  </body>
 </html>
