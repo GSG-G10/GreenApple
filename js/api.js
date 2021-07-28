@@ -14,13 +14,13 @@ function api(url, callback) {
       let response = JSON.parse(xhr.responseText);
       return callback(response);
     } else if (300 <= xhr.status && xhr.status <= 399) {
-      httpStatusMessage.textContent="Redirection messages"
+      httpStatusMessage.textContent = "Redirection messages";
       httpStatusMessage.style.disply = "block";
     } else if (400 <= xhr.status && xhr.status <= 499) {
-      httpStatusMessage.textContent="Client error responses"
+      httpStatusMessage.textContent = "Client error responses";
       httpStatusMessage.style.disply = "block";
     } else if (500 <= xhr.status && xhr.status <= 599) {
-      httpStatusMessage.textContent="Server error responses"
+      httpStatusMessage.textContent = "Server error responses";
       httpStatusMessage.style.disply = "block";
     }
   });
