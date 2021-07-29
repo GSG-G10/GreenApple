@@ -1,6 +1,7 @@
+"use strict";
+
 let searchQuery = "";
-const APP_ID = "89a1d13b";
-const APP_key = "3f2a61e5b8ace018b67bc8fde3473cac";
+
 //  General Action
 function addListener(selector, action, callback) {
   document.querySelector(selector).addEventListener(action, callback);
@@ -8,9 +9,8 @@ function addListener(selector, action, callback) {
 // General  Function Api
 function api(url, callback) {
   const xhr = new XMLHttpRequest();
-
-  xhr.addEventListener("load", function () {
-    if (xhr.readyState == 4) {
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState === 4) {
       if (200 <= xhr.status && xhr.status <= 299) {
         let response = JSON.parse(xhr.responseText);
         return callback(response);
@@ -25,7 +25,7 @@ function api(url, callback) {
         httpStatusMessage.style.disply = "block";
       }
     }
-  });
+  };
   xhr.open("GET", url);
   xhr.send();
 }
